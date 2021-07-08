@@ -18,8 +18,8 @@ if len(sys.argv) >= 4:
     mem = sys.argv[3]
 
 
-BASE_DIR = "/icgc/dkfzlsdf/analysis/OE0532"
-DIRICORE_PATH = "$BASE_DIR/software/diricore"
+BASE_DIR = os.getenv('BASE_DIR')
+DIRICORE_PATH = os.path.join(BASE_DIR, "software/diricore")
 
 project_dir = os.path.join(BASE_DIR, project_id)
 input_dir = os.path.join(project_dir, "analysis/output/rrna/blat_results")
