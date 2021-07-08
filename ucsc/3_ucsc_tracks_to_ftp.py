@@ -4,7 +4,6 @@ import os
 import datetime
 from datetime import datetime
 import sys
-#from pathlib import Path
 
 project = None
 if len(sys.argv) >= 2:
