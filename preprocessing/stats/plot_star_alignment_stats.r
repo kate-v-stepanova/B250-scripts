@@ -1,5 +1,10 @@
 #!/usr/bin/env Rscript
 
+#R_DIR = Sys.getenv('R3_6_DIR')
+
+#.libPaths(c(R_DIR, .libPaths())
+.libPaths(c('/omics/groups/OE0532/internal/RStudio_3.6.2', .libPaths()))
+
 # R/3.5.1
 library(ggplot2)
 library(data.table)

@@ -24,6 +24,6 @@ bc_df = bc_df.loc[bc_df['sample'] != 'total'] # discard total
 df = pd.merge(bc_df, rrna_df, how='outer')
 df = pd.merge(df, align_df, how='outer')
 df = pd.merge(df, dedup_df, how='outer')
-
+df = df.drop_duplicates()
 print('Writing file: {}'.format(outfile))
 df.to_csv(outfile, sep="\t", index=False)
